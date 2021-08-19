@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'resume_app/style.css' %}">
+    <title>PortResume</title>
+</head>
+<body>
+    <header>
+        <div class="user">
+            <h2 class="name">David</h2>
+            <h3 class="stack">Backend Engineer</h3>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="fas fa-bars" id="menu"></div>
+        <section class="home" id="home">
+            </h2>Hey</h2>
+            <h1>I'm David</h1>
+            <p>I'm into <span>Backend Engineering and also a very big AI Enthusiast
+                Though I am more interested in machine learning, I find backend engineering a great way to learn the 
+                technicalities on how the internet works</span> really excited on the challenges so far on <a class="linkng" href="https://hng.tech">Hng</a> </p>
+            <a href="#about"><button class="btn">About me</button><i class="fas fa-user"></i></a>
+
+        </section>
+
+    <section class="about" id="about">
+        <h1 class="heading"><span>About </span>Me</h1>
+        <div class="row">
+            <div class="info">
+            <h3> <span> Name : </span> David </h3>
+            <h3> <span> Age : </span> 19 </h3>
+            <h3> <span> Stack : </span> Backend Engineer </h3>
+            <h3> <span> Language : </span> English,Yoruba,Russian <span class="learn">[learning ;)  ]</span> </h3>
+        </div>
+    </section>
+
+<section class="portfolio" id="portfolio">
+        <h1 class="heading"> my <span>portfolio</span> </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="{% static 'resume_app/images/img1.png' %}">
+    </div>
+
+    <div class="box">
+        <img src="{% static 'resume_app/images/img2.png' %}">
+    </div>
+    
+    <div class="box">
+        <h2>A LogIn Page, testing different possibilities of combinations</h2>
+        <br>
+        <h2>An Interactive To-do list to keep on time</h2>
+    </div>
+
+</section>
+<section class="contact" id="contact">
+
+<h1 class="heading"> <span>Contact</span> Me </h1>
+
+<div class="row">
+
+    <div class="content">
+
+        <h3 class="title">Contact Info</h3>
+
+        <div class="info">
+            <h3> resume@gmail.com </h3>
+            <h3> +123-456-7890 </h3>
+            <h3>Lagos, Nigeria - 123456. </h3>
+
+        </div>
+
+    </div>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <input name="name" type="text" placeholder="Name" class="box">
+        <input name="email" type="email" placeholder="E-mail" class="box">
+        <input name="title" type="text" placeholder="Title" class="box">
+        <textarea name="message" id="" cols="30" rows="10" class="box message" placeholder="Message"></textarea>
+        <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+
+    </form>
+
+</div>
+
+<div class="box-2">
+    <img src="{% static 'resume_app/images/hng.png' %}">
+</div>
+
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
